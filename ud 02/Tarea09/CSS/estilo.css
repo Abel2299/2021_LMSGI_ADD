@@ -1,0 +1,106 @@
+h1{color:Crimson;
+	text-decoration:underline;
+	text-decoration-style:wavy;
+	text-transform:capitalize;
+	font-weight:bold;
+	font-size:3em;
+	letter-spacing:5px;
+}
+
+body{
+	background-image:url(../images/Le_petit_prince.png);
+	background-position:top right;
+	background-repeat:no-repeat;
+	margin-right:300px;
+}
+
+p{background-color:Crimson;
+	/*font-size:2em;*/
+	font-style:italic;
+	padding:5px 0;
+	
+ }
+
+p span{color:white;}
+
+p:first-letter{
+	font-size:2em;
+}
+
+.lista1 > li, .lista2 > li, .lista3 > li{
+		/*border-color:Crimson;
+		border-style:dotted;
+		border-width:1px;*/
+		border: dotted Crimson 1px;
+		
+		}	
+
+.lista1{
+	list-style-position:inside;
+	list-style-type:circle;
+
+}
+
+.lista2{
+	list-style-position:outside;
+	list-style-type:square;
+}
+
+.lista3{
+	list-style-position:inside;
+	list-style-image:url(../images/sqpurple.png);
+	
+}
+
+.lista4{
+		background-color: lightsalmon;
+		border:dashed darkred 2px;
+		list-style-type:none;
+		padding:5px 20px;
+		}
+
+.lista4 li{
+	background-color:darkred;
+	color:lightsalmon;
+	margin:5px;
+	padding-left:5px;
+}
+
+.lista4 li:before{
+	content: '#';
+	width:1em;
+	margin-left: -1em;
+	color:darkred;
+	display:inline-block;
+}
+.lista5{
+	background-color: lightsalmon;
+	list-style-type:none;
+	border-left-color:darkred;
+	border-left-color:darkred;
+	border-left-width:5px;
+	border-left-style:solid;
+	color:darkred;
+	padding:5px;
+}
+
+.lista6{
+	list-style-type:none;
+	color:darkred;
+	padding:5px;
+}
+
+.lista6 > li{
+	border-style:dotted;
+	border-color:Crismon;
+	
+	border-top-width:1px;
+	border-left-width: 1px;
+	border-right-width:1px;
+	border-bottom-width:0px;
+	padding:5px;
+}
+
+.lista6 li:last-child{
+	border-bottom-width:1px;
+}

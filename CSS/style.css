@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu div {
+    background-color: #E50914;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.menu div:hover {
+    background-color: #221F1F;
+    cursor: pointer;
+    /* transition: linear 0.5s; */
+}
+
+.menu .xml:hover {
+    cursor: not-allowed;
+}
+
+.home {
+    display: inline-block;
+    width: 40%;
+    float: left;
+}
+
+.html,
+.css,
+.xml {
+    display: inline-block;
+    width: 20%;
+    float: left;
+}
+
+.container {
+    background-color: #F5F5F1;
+    padding: 10px 3%;
+    float: left;
+    min-height: 87.7vh;
+}
+
+.imagenPortada {
+    float: left;
+    position: relative;
+    top: 50px;
+}
+
+.container {
+    padding: 0px 10%;
+    text-align: center;
+}
+
+.container p {
+    text-align: justify;
+    padding-left: 650px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+.container .parrafo1 {
+    padding-top: 200px;
+    padding-bottom: 20px;
+}
+
+.container pre {
+    padding-left: 650px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.container .cajaPractica {
+    width: 325px;
+    display: inline-block;
+
+}
+
+.container .cajaPractica a img {
+    width: 325px;
+}
+
+.container .cajaPractica a {
+    text-decoration: none;
+}
+
+.container .cajaPractica .tituloPractica {
+    font-size: 40px;
+    color: #221F1F;
+    text-align: center;
+}
+
+.menuLateralIconos {
+    position: fixed;
+    bottom: 60px;
+    right: 80px;
+}
+
+.menuLateralIconos .icono {
+    display: inline-block;
+}
+
+.menuLateralIconos .icono img {
+    width: 30px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #221F1F;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+}
+
+.copyright, .nombre, .nombreAsignatura {
+    display: inline-block;
+    color: white;
+    width: 33%;
+}

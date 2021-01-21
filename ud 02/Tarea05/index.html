@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--Autor: Abel Dominguez Dominguez
+	Fecha de cracion: 28/10/2020
+	Modificacion:29/10/2020
+-->
+<html lang="es">
+	<head>
+		<title>HTML 05 Abel Dominguez Dominguez</title>
+		<meta charset="UTF-8">	
+		<link rel="icon" href="../../images/favicon.ico">
+	</head>
+	
+	<body >
+		<header>
+			<h1 style="text-align:center">Plantilla de formulario de Restaurantes</h1>
+		</header>
+		<form method="GET" action="/registro.php">
+			<label for="archivo">Selecciona documento:</label>
+			<input type="file" id="archivo" name="archivo"><br>
+			
+			<label for="buscador">Buscador:</label>
+			<input type="search" id="buscador" name="buscador">
+			<input type="submit"><br>
+		
+			<fieldset style="background-color:#b3d9ff">
+				<legend style="border: 1px solid black; background-color: #e5fff9">Datos del Restaurante</legend>
+				<table>
+					<tr>
+						<td><label for="nombre">Nombre del restaurante *</label></td>
+						<td><label for="direccion">Direccion *</label></td>
+						<td><label for="email">Correo electrónico *</label></td>
+						<td><label for="telefono">Nº Telefono *</label></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="nombre" required></td>
+						<td><input type="text" id="direccion" required></td>
+						<td><input type="email" id="email" name="email" placeholder="correoelectronico@gmail.com" required></td>
+						<td><input type="tel" id="telefono" placeholder="+34 000-00-00-00" pattern="[+34][0-9]{3}[-][0-9]{2} [-][0-9]{2} [-][0-9]{2}" required>
+					</tr>
+				</table>	
+			</fieldset >
+			
+			<fieldset style="background-color:#b3c6ff">
+				<legend style="border: 1px solid black; background-color: white">Sobre la carta</legend>
+					<h3>Que platos pidió</h3>
+					<ul style="list-style:none;">
+						<li><strong>Entrada fría</strong></li>
+						<li>
+							<ul style="list-style:none;">
+								<li><label for="carpaccio"><input type="radio" name="entradaFria" id="carpaccio">Carpaccio con vinagreta de mostaza</label></li>
+								<li><label for="terrina"><input type="radio" name="entradaFria" id="terrina">Terrina de foie</label></li>
+								<li><label for="brioche"><input type="radio" name="entradaFria" id="brioche">Brioche zanahoria y chutney</label></li>
+							</ul>
+						</li>
+						
+						<li><strong>Pescados</strong></li>
+						<li>
+							<ul style="list-style:none;">
+								<li><label for="merluza"><input type="radio" name="pescados" id="merluza">Merluza en salsa verde</label></li>
+								<li><label for="bacalao"><input type="radio" name="pescados" id="bacalao">Bacalao al pil-pil</label></li>
+								<li><label for="tataki"><input type="radio" name="pescados" id="tataki">Tataki de salmón</label></li>
+							</ul>
+						</li>
+						<li><strong>Carnes</strong></li>
+						<li>
+							<ul style="list-style:none;">
+								<li><label for="ciervo"><input type="radio" name="carnes" id="ciervo">Lomo de ciervo</label></li>
+								<li><label for="cordero"><input type="radio" name="carnes" id="cordero">Cordero lechal</label></li>
+								<li><label for="codillo"><input type="radio" name="carnes" id="codillo">Codillo de cerdo</label></li>
+							</ul>
+						</li>
+					</ul>
+			</fieldset>
+			
+			<fieldset style="background-color:#b3c6ff">
+				<legend style="border: 1px solid black; background-color: white">Comodidades y establecimiento</legend>
+				<table>
+					<tr>
+						<td><label for="instalaciones">Instalaciones y Ambiente</label></td>
+						<td style="padding-left: 20px;"><label for="calidad">Calidad de la comida (0-10)</label></td>
+						<td></td>
+						<td style="padding-left: 20px;"><label for="camareros">Atencion del personal</label></td>
+					</tr>
+					<tr>
+						<td><input list="listInstalaciones" name="instalaciones" id="instalaciones" >
+							<datalist id="listInstalaciones">	
+								<option value="limpio">
+								<option value="normal">
+								<option value="descuidado">
+							</datalist>
+						</td>
+						<td style="padding-left: 20px;"><input type="number" id="calidad" name="calidad" min="0" max="10"></td>
+						<td></td>
+						<td style="padding-left: 20px;"><select id="camareros" size="4" multiple>
+								<option value="muySatisfactorio">Muy Satisfactorio</option>
+								<option value="satisfactorio">Satisfactorio</option>
+								<option value="normal">Normal</option>
+								<option value="malo">Malo</option>
+							</select></td>
+					</tr>
+
+					<tr>
+						<td style="padding-top: 15px;"><label for="tiempo">Tiempo aprox. en el restaurante</label></td>
+						<td style="padding-left: 20px;padding-top: 15px"><label for="espera">¿Esperó mucho por su comida?</label></td>
+						<td></td>
+						<td style="padding-left: 20px;padding-top: 15px"><label for="fecha"> Fecha cuando acudió</label></td>
+					</tr>
+					<tr>
+						<td ><input type="time" name="hora" id="tiempo" value="00:00" min="00:00" max="12:00" step="15"></td>
+						<td style="padding-left: 20px;"><p>0<input id="espera" name="Rango" type="range" min="0" max="10">10</td>
+						<td></td>
+						<td style="padding-left: 20px;"><input type="date" name="fecha" id="fecha" min="2000-01-01"></td>
+					</tr>	
+					<tr>
+						<td>¿Le gustaría volver?</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="volver"><input type="radio" name="volver" id="volver" >Si</label>	
+						<label for="volver2"><input type="radio" name="volver" id="volver2" >No</label></td>	
+						<td></td>
+						<td></td>
+						<td></td>					
+					</tr>
+					<tr >
+						<td style="padding-top: 15px;"><strong>(Si es asi indiquenos cuando)</strong></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="week">Seleccione semana:</label></td>
+						<td><label for="month">Seleccione mes:</label></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="week" id="week" name="week"></td>
+						<td><input type="month" id="month" name="month"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					
+				</table>
+			</fieldset>
+			
+			<fieldset style="background-color:#ffcc99">
+				<legend style="border: 1px solid black; background-color:#fff2e5">Otros datos</legend>
+				<table>
+					<tr>
+						<td><strong>Indique si contaba con alguna de estas instalaciones</strong></td>
+					</tr>
+					<tr>
+						<td><label for="parking"><input type="checkbox" name="parking" id="parking">Parking</label></td>	
+					</tr>
+					<tr>
+						<td><label for="terraza"><input type="checkbox" name="terraza" id="terraza">Terraza</label></td>
+					</tr>
+					<tr>
+						<td><label for="tarjeta"><input type="checkbox" name="tarjeta" id="tarjeta">Pago por tarjeta</label></td>					
+					</tr>	
+					<tr>
+						<td><textarea name="Observaciones" id="Observaciones" rows="3" cols="30" placeholder="Observaciones"></textarea></td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<table>
+					<tr>
+						<td><label for="color">Selecciona un color</label><input type="color" name="color" id="color"></td>
+					</tr>
+					<tr>
+						<td><label for="contrasena">Contraseña:</label><input type="password" id="contrasena" name="contrasena" minlength="6" ></td>
+					</tr>	
+				</table>
+			</fieldset>
+			
+			<p style="text-align:center;padding-top: 10px;">
+				<input type="image" src="images/ok.jpg" alt="Mano Ok" width="48" height="48">
+				<input type="submit" value="Enviar">
+				<input type="reset" value="Borrar todo">
+			</p>
+		
+		</form>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE table[
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT fila (descripcion, fecha)>
+    <!ELEMENT table (fila*)>
+	<!ATTLIST fecha dia CDATA #REQUIRED >
+	<!ATTLIST fecha mes CDATA #REQUIRED >
+	<!ATTLIST fecha anyo CDATA #REQUIRED >
+   
+]>
+
+<table>
+    <fila>
+        <descripcion>youtube</descripcion>
+        <fecha dia="15" mes="2" anyo="2005"/>
+    </fila>
+    <fila>
+       <descripcion>google</descripcion>
+        <fecha dia="4" mes="9" anyo="1998"/>
+    </fila>
+    <fila>
+        <descripcion>facebook</descripcion>
+        <fecha dia="4" mes="9" anyo="2004"/>
+    </fila>
+
+</table>

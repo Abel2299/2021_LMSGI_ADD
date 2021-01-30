@@ -1,7 +1,13 @@
-<!ELEMENT descripcion (#PCDATA)>
-<!ELEMENT dia (#PCDATA)>
-<!ELEMENT mes (#PCDATA)>
-<!ELEMENT anyo (#PCDATA)>
-<!ELEMENT fecha (dia, mes, anyo)>
-<!ELEMENT hechoshistoricos (descripcion, fecha)>
-<!ELEMENT hechos (hechoshistoricos*)>
+   <!ELEMENT remitente (#PCDATA)>
+    <!ELEMENT destinatario (#PCDATA)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anyo (#PCDATA)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT mensaje (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT fecha (dia, mes, anyo)>
+    <!ELEMENT fichero (nombre, tipo)>
+    <!ELEMENT mail (remitente, destinatario+, fecha, asunto?, mensaje?, fichero*)>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grupoEstudiantes>
+    <estudiante>
+        <tutor>
+            <nombre></nombre>
+            <codigo></codigo>
+        </tutor>
+    </estudiante>
+</grupoEstudiantes>

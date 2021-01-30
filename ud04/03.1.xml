@@ -1,40 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE table[
-    <!ELEMENT descripcion (#PCDATA)>
-    <!ELEMENT dia (#PCDATA)>
-    <!ELEMENT mes (#PCDATA)>
-    <!ELEMENT anyo (#PCDATA)>
-    <!ELEMENT fecha (dia, mes, anyo)>
-    <!ELEMENT fila (descripcion, fecha)>
-    <!ELEMENT table (fila*)>
-   
-]>
-
-<table>
-    <fila>
+<!DOCTYPE hechos SYSTEM '03.dtd'>
+<hechos>
+    <hechoshistoricos>
         <descripcion>youtube</descripcion>
         <fecha>
             <dia>15</dia>
             <mes>2</mes>
             <anyo>2005</anyo>
         </fecha>
-    </fila>
-    <fila>
+    </hechoshistoricos>
+    <hechoshistoricos>
        <descripcion>google</descripcion>
         <fecha>
             <dia>4</dia>
             <mes>9</mes>
             <anyo>1998</anyo>
         </fecha>
-    </fila>
-    <fila>
+    </hechoshistoricos>
+    <hechoshistoricos>
         <descripcion>facebook</descripcion>
         <fecha>
             <dia>4</dia>
             <mes>9</mes>
             <anyo>2004</anyo>
         </fecha>
-    </fila>
-
-</table>
+    </hechoshistoricos>
+</hechos>

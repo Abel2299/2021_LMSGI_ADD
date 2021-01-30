@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mundo[
     <!ELEMENT continente (#PCDATA)>
-    <!ELEMENT pais (#PCDATA)>
     <!ELEMENT capital (#PCDATA)>
-    <!ELEMENT fila (continente, pais, capital)>
+    <!ELEMENT fila (continente, capital)>
+	<!ATTLIST fila nombrePais CDATA #IMPLIED >
     <!ELEMENT mundo (fila*)>	
 ]>
 
 <mundo>
-    <fila>
+    <fila nombrePais="Alemania">
         <continente>Europa</continente>
-        <pais>Alemania</pais>
         <capital>Berlin</capital>
     </fila>
-    <fila>
+    <fila nombrePais="Argentina">
         <continente>America</continente>
-        <pais>Argentina</pais>
         <capital>Buenos Aires</capital>
     </fila>
-    <fila>
+    <fila nombrePais="Bahamas">
         <continente>America</continente>
-        <pais>Bahamas</pais>
         <capital>Nassau</capital>
     </fila>
-    <fila>
+    <fila nombrePais="Afganistan">
         <continente>Asia</continente>
-        <pais>Afganistan</pais>
         <capital>Kabul</capital>
     </fila>
-    <fila>
+    <fila nombrePais="Arabia Saudita">
         <continente>Asia</continente>
-        <pais>Arabia Saudita</pais>
         <capital>Riad</capital>
     </fila>
 

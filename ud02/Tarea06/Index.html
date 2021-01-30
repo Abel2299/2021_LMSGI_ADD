@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--Autor: Abel Dominguez Dominguez
+	Fecha de cracion: 03/11/2020
+	Modificacion:05/11/2020
+-->
+<html lang="es-ES">
+	<head>
+		<title>HTML 06 Abel Dominguez Dominguez</title>
+		<meta charset="UTF-8">
+		<link rel="icon" href="../../images/favicon.ico">
+		
+	</head>
+	<body>
+		<header>
+			<h1>MULTIMEDIA:Restaurantes</h1>
+		</header>
+		<div>
+			<p><strong>Celler de Can Roca</strong></p>
+			<img src="media/images/celler.jpg" alt="Comedor Celler de Can Roca" width="300" height="220" usemap="#celler" />
+			<map name="celler">
+				<area shape="rect" coords="1,4,555,342" alt="Pagina oficial Celler de Can Roca" href="http://cellercanroca.com/" />
+			</map>
+			
+			<video width="300" height="240" controls >
+				<source src="media/video/celler.mp4" type="video/mp4">
+				<source src="media/video/celler.mp4" type="video/ogg">
+			</video>	
+			<audio controls>
+				<source src="media/audio/celler.ogg" type="audio/ogg">
+				<source src="media/audio/celler.mp3" type="audio/mpeg">
+			</audio>
+		</div><br>
+		<div>
+			<p><strong>Restaurante Azurmendi</strong></p>
+			<img src="media/images/azurmendi.jpg" alt="Comedor Azurmendi" width="300" height="220" usemap="#azurmendi">
+			<map name="azurmendi">
+				<area shape="rect" coords="2,0,595,332" alt="Azurmendi pagina oficial" href="https://azurmendi.restaurant/" />
+			</map>
+			<video width="300" height="240" controls>
+				<source src="media/video/azurmendi.mp4" type="video/ogg">
+				<source src="media/video/azurmendi.mp4" type="video/mp4">
+			</video>
+			
+			<audio controls>
+				<source src="media/audio/azurmendi.ogg" type="audio/ogg">
+				<source src="media/audio/azurmendi.mp3" type="audio/wav">
+			</audio>
+		</div><br>
+		<div>
+			<p><strong>Restaurante Yakitoro</strong></p>
+			<picture>
+				<source media="(max-width:650px)" srcset="media/images/yakitoro.jpg">
+				<source media="(max-width:400px)" srcset="media/images/yakitoro2.jpg">
+				
+				<img src="media/images/yakitoro2.jpg" alt="Entrada al Yakitoro" width="300" height="220" usemap="#yakitoro">
+			</picture>
+			<map name="yakitoro">
+				<area shape="rect" coords="2,1,544,392" alt="Yakitoro Pagina Oficial" href="https://yakitoro.com/" />
+			</map>
+			
+			<video width="300" height="240" controls>
+				<source src="media/video/yakitoro.mp4" type="video/mp4">
+			</video>
+		
+			<audio controls>
+				<source src="media/audio/yakitoro.ogg" type="audio/wav">
+				<source src="media/audio/yakitoro.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		
+		<footer>
+			 <p>2020-21 IES LOS SAUCES. Todos los derechos reservados.Abel Dominguez Dominguez</p>
+		</footer>	
+
+	</body>
+</html>

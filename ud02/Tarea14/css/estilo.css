@@ -1,0 +1,93 @@
+﻿
+/* 
+    Created on : 06-dic-2020
+    Author     : Abel Dominguez Dominguez
+   
+*/
+
+
+
+@font-face {
+   font-family: 'casa';
+   src: url('fonts\fontawesome\webfonts\fa-brands-400.ttf');
+}
+
+ul{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	}
+	
+nav{
+	background-color:grey;
+	text-align:center;
+	
+}
+	
+nav li{
+	display:inline-block;
+	padding:20px 40px;
+	margin:0px;
+    }
+
+nav a{
+	text-decoration:none; 
+	color: black;
+	background-color:grey;
+	margin-left:4px;
+	}
+
+.active{
+	
+}
+
+.sidemenu ul li a{
+	color:white;
+	text-decoration:none;
+	font-size:18px;
+	padding: 9px;	
+}
+
+.sidemenu ul li{
+	padding:10px;
+	margin:3px;
+	background-color:grey;
+}
+
+.sidemenu {
+	display:inline-block;
+	max-width:24%;
+	min-width:220px;
+	vertical-align:top;
+}
+
+h1{
+	
+	border:#990000 3px solid;
+	color:#990000;
+	text-align:center;
+	padding:18px;
+	text-transform:uppercase;
+}
+
+h2{
+	color:#990000;
+	font-family:casa;
+	letter-spacing:2px;
+	text-transform:uppercase;
+}
+
+.content{
+	display:inline-block;
+	max-width:66%;
+	margin-left:9px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+footer{
+	background-color:grey;
+	text-align:center;
+	padding:3px;
+}
+
+

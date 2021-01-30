@@ -1,0 +1,34 @@
+th,td {
+  border: 1px solid black;
+  width:16%;
+  vertical-align:middle;
+}
+
+h1{
+	text-align:center
+}
+
+table{
+	
+	margin:auto;
+	border-collapse:separate;
+	border-spacing:15px  30px;
+	width:75%;
+}
+
+tr:nth-child(even){ 		/*2n+2*/
+	background-color:lightblue;
+}
+
+tbody tr:nth-child(odd){ 	/*2n+1*/
+	background-color:#00FFF8;
+	font-family:Goldman-Bold;
+}
+tbody th:hover{
+	background-color: #A64B00;
+	font-family:Goldman-Regular;
+}
+
+tbody td:hover{
+	background-color: #A64B00;
+}

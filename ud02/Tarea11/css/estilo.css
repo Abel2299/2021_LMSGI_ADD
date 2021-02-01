@@ -4,10 +4,7 @@
     Author     : Abel Dominguez
    
 */
-@font-face {
-   font-family: 'Arial';
-   src: url('../Fonts/arial_narrow_7.ttf');
-}
+
 
 h1{
 	color:#FF4500;
@@ -145,4 +142,4 @@ p{
 	color:purple;
 	padding:6px;
 }
-}
+

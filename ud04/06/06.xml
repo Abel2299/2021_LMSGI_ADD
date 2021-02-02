@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="06.css"?>
+
+<!DOCTYPE lenguajes[
+
+    <!ELEMENT lenguajes (codigo+)>
+    <!ELEMENT codigo (nombre, ejemplo)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT ejemplo (#PCDATA)>
+]>
+
+<lenguajes>
+    <codigo>
+        <nombre>HTML</nombre>
+        <ejemplo>
+            <![CDATA[
+                <tr>
+                    <td><label for="Nombre"> Nombre:</label></td>
+                    <td><label for="Apellidos"> Apellidos:</label></td>
+                    <td><label for="DNI"> DNI</label></td>
+                    <td><label for="Telefono">Teléfono</label></td>
+		</tr>
+            ]]>
+        </ejemplo>
+    </codigo>
+    <codigo>
+        <nombre>JAVA</nombre>
+        <ejemplo>
+            <![CDATA[
+                 float n1=10.8f;
+                 float n2= 5.4f;
+                 System.out.println(n1/n2);
+             ]]>
+        </ejemplo>
+    </codigo>
+</lenguajes>

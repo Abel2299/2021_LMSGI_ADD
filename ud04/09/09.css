@@ -1,0 +1,9 @@
+
+texto{
+    white-space: pre;
+}
+
+texto:after{
+    content:'\A';
+    white-space: pre;
+}

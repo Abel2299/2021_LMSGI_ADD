@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="09.css"?>
-<!DOCTYPE textos SYSTEM '09.dtd'>
+
+<!DOCTYPE textos [
+    <!ENTITY escritor "Miguel de Cervantes">
+    <!ENTITY obra "El Quijote">
+    <!ENTITY fecha "29/09/1947">
+    <!ELEMENT texto (#PCDATA)>
+    <!ELEMENT textos (texto+)>
+]>
 
 <textos>
     <texto>El Quijote fue escrito por Miguel de Cervantes</texto>

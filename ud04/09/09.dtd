@@ -1,2 +1,0 @@
-<!ELEMENT textos (texto+)>
-<!ELEMENT texto (#PCDATA)>

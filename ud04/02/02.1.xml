@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mundo SYSTEM '02.dtd'>
+<!--<!DOCTYPE mundo SYSTEM '02.dtd'>-->
 
-<mundo>
+<mundo xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='esquema2.xsd'>
     <fila>
         <continente>Europa</continente>
         <pais>Alemania</pais>

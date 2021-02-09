@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
 <!DOCTYPE mundo[
     <!ELEMENT continente (#PCDATA)>
     <!ELEMENT capital (#PCDATA)>
@@ -6,6 +8,9 @@
 	<!ATTLIST fila nombrePais CDATA #IMPLIED >
     <!ELEMENT mundo (fila*)>	
 ]>
+
+-->
+
 
 <mundo>
     <fila nombrePais="Alemania">

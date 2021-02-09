@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE hechos SYSTEM '03.dtd'>
-<hechos>
+<!--<!DOCTYPE hechos SYSTEM '03.dtd'>-->
+<hechos   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='esquema3.xsd'>
     <hechoshistoricos>
         <descripcion>youtube</descripcion>
         <fecha>

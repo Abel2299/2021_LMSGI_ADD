@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+
+
+<mail
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='esquema1.xsd'>
+    <remitente>Usur 1</remitente>
+    <destinatario>Anonimo</destinatario>
+    <fecha>
+        <dia>08</dia>
+        <mes>05</mes>
+        <anyo>2020</anyo>
+    </fecha>
+
+</mail>

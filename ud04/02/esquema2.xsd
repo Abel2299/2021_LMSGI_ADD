@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+        
+    <xs:element name="mundo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fila">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="continente" type="xs:string"/>
+                            <xs:element name="pais" type="xs:string"/>
+                            <xs:element name="capital" type="xs:string"/>
+                        </xs:sequence>                           
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence> 
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

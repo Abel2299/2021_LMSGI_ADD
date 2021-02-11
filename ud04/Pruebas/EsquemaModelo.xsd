@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!--
+autor: Abel Dominguez
+fecha: 11/02/2021
+descripcion: validación de elementos simples
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="modelo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="curso">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1"/>
+                            <xs:maxInclusive value="2"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="ciclo">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="DAW"/>
+                            <xs:enumeration value="ASIR"/>
+                            <xs:enumeration value="DAM"/>
+                            <xs:enumeration value="SMR"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="nombreCiclo">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="3"/>
+                            <xs:maxLength value="100"/>
+                            <xs:pattern value="[A-Z]([a-zA-Z ])*"/>
+                        </xs:restriction>      
+                    </xs:simpleType>         
+                </xs:element>
+                <xs:element name="codigoPostal">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{5}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="comentario">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:whiteSpace value="collapse"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="temperatura">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:totalDigits value="5"/>
+                            <xs:fractionDigits value="2"/>
+                            <xs:minInclusive value="-50"/>
+                            <xs:maxInclusive value="50"/>
+                        </xs:restriction>
+                    </xs:simpleType>                   
+                </xs:element>
+                <xs:element name="CodAsignatura">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="BDD|PROG|LMSGI|SINF|EDD"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

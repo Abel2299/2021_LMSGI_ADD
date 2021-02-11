@@ -16,4 +16,5 @@ and open the template in the editor.
     <comentario>     Este       ciclo   tiene    una      intencion    laboral    de        100%      </comentario>
     <temperatura>16.24</temperatura>
     <CodAsignatura>BDD</CodAsignatura>
+    <profesor codP="AAA" modulo="LM">AAA</profesor>
 </modelo>

@@ -2,12 +2,16 @@
 
 <!DOCTYPE grupo [
     <!ELEMENT grupo (estudiante*)>
+    <!ATTLIST grupo
+    xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED>
     <!ELEMENT estudiante (#PCDATA)>
     <!ATTLIST estudiante cod ID #REQUIRED
                          idref  IDREFS #IMPLIED>
 ]>
 
-<grupo>
+<grupo xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='esquema7.xsd'>
     <estudiante cod="E1" idref="E2 E3">       
          Abel
     </estudiante>

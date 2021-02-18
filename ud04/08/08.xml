@@ -3,9 +3,13 @@
 
 
 <!DOCTYPE lugares[
-    <!ELEMENT lugares (#PCDATA | lugar)+>
+    <!ELEMENT lugares (#PCDATA | lugar)*>
+    <!ATTLIST lugares
+    xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED>
     <!ELEMENT lugar (#PCDATA)>
 ]>
 
-<lugares> En el <lugar> polo norte</lugar> hace mucho frío. Pero, en el <lugar> desierto del Sahara</lugar>hace mucho calor.</lugares>
+<lugares xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="08.xsd"> En el <lugar> polo norte</lugar> hace mucho frío. Pero, en el <lugar> desierto del Sahara</lugar>hace mucho calor.</lugares>
 

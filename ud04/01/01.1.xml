@@ -2,7 +2,8 @@
 <!DOCTYPE mail SYSTEM '01.dtd'>
 
 
-	<mail >
+	<mail xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='esquema1.xsd'>
 		<remitente>perico@gmail.com</remitente>
 		<destinatario>ambrosio@gmail.com</destinatario>
 		<destinatario>meli@gmail.com</destinatario>

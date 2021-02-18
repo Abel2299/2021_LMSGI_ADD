@@ -2,7 +2,8 @@
 
 <!DOCTYPE horario SYSTEM '10.dtd'>
 
-<horario>
+<horario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="08.xsd">
     <modulos>
         <modulo codM="EDD">Entornos de Desarrollos</modulo>
         <modulo codM="LMSGI">Lenguaje de Marcas</modulo>

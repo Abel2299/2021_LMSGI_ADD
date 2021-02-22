@@ -12,14 +12,18 @@ and open the template in the editor.
     <xs:element name="horario"> 
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="modulo" maxOccurs="unbournded">
+                <xs:element name="modulos">
                     <xs:complexType>
-                        <xs:simpleContent>
-                            <xs:extension base="xs:string">
-                                <xs:attribute name="codM" type="xs:string">
-                                </xs:attribute>
-                            </xs:extension>                                                    
-                        </xs:simpleContent>
+                        <xs:sequence>
+                            <xs:element name="modulo" maxOccurs="unbournded">
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="codM" type="xs:string">
+                                        </xs:attribute>
+                                    </xs:extension>                                                    
+                                </xs:simpleContent>
+                            </xs:element>
+                        </xs:sequence>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

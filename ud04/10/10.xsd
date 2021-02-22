@@ -15,13 +15,70 @@ and open the template in the editor.
                 <xs:element name="modulos">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="modulo" maxOccurs="unbournded">
+                            <xs:element name="modulo" maxOccurs="unbounded">
                                 <xs:simpleContent>
                                     <xs:extension base="xs:string">
-                                        <xs:attribute name="codM" type="xs:string">
-                                        </xs:attribute>
+                                        <xs:attribute name="codM" use="required" type="xs:string"/> 
                                     </xs:extension>                                                    
                                 </xs:simpleContent>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="profesores">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="profesor" maxOccurs="unbounded">
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="codP" use="required" type="xs:ID"/> 
+                                    </xs:extension>                                                    
+                                </xs:simpleContent>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="imparte">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="asignatura" maxOccurs="unbounded">
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="codM" use="required" type="xs:string"/>
+                                        <xs:attribute name="codProfesor" use="required" type="xs:IDREFS"/> 
+                                    </xs:extension>                                                    
+                                </xs:simpleContent>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="grupo">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                    <xs:attribute name="idgrupo" use="required" type="xs:string" />
+                                     <xs:attribute  name="idref"  use="required"  type="xs:IDREFS"/>
+                                </xs:extension>
+                            </xs:simpleContent>
+                            <xs:element name="hora" maxOccurs="unbounded">
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="entrada" use="required" type="xs:string"/> 
+                                        <xs:attribute name="salida" use="required" type="xs:string"/> 
+                                    </xs:extension>                                                    
+                                </xs:simpleContent>
+                               <xs:element name="dia_sem">
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="dia" use="required" type="xs:string"/> 
+                                        <xs:attribute name="num" type="xs:integer"/> 
+                                    </xs:extension>                                                    
+                                </xs:simpleContent>
+                            </xs:element>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>

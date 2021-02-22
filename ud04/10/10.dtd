@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+idgrupo<?xml version='1.0' encoding='UTF-8'?>
 <!ELEMENT horario (modulos,profesores,imparte, grupo*)>
 <!ATTLIST horario
     xsi:noNamespaceSchemaLocation CDATA #IMPLIED

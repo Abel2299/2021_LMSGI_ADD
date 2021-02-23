@@ -8,11 +8,93 @@ and open the template in the editor.
 <xs:schema version="1.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
-
+    
+   <!-- Declaracion TipoModulos-->        
+    <xs:complexType name="tipoModulos">
+        <xs:sequence>
+            <xs:element name="modulo" type="tipoModulo" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tipoModulo">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="codM" type="xs:ID" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:ID">
+                            <xs:pattern value="EDD|LMSGI|PROG|BBDD|FOL|SINF"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- Declaracion TipoProfesores-->
+    <xs:complexType name="tipoProfesores">
+        <xs:sequence>
+            <xs:element name="profesor" type="tipoProfesor" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tipoProfesor">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="codP" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- Declaracion TipoImparte-->
+     <xs:complexType name="tipoImparte">
+        <xs:sequence>
+            <xs:element name="asignatura" type="tipoAsignatura" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tipoAsignatura">
+        <xs:attribute name="codM" type="xs:string" use="required"/>
+        <xs:attribute name="codProfesor" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <!-- Declaracion TipoGrupo-->
+    <xs:complexType name="tipoGrupo">
+        <xs:sequence>
+            <xs:element name="hora" type="tipoHora" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="idgrupo" type="xs:string"/>
+        <xs:attribute name="codT" type="xs:string"/>
+    </xs:complexType>
+    
+    <!-- Declaracion TipoHora-->
+    <xs:complexType name="tipoHora">
+        <xs:sequence>
+            <xs:element name="dia_sem" type="tipoDiaSem" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="entrada" type="xs:string" use="required"/>
+        <xs:attribute name="salida" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <!-- Declaracion TipoDiaSemana-->
+    <xs:complexType name="tipoDiaSem">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="dia" type="xs:string" use="required"/>
+                <xs:attribute name="num" type="xs:string" default="1"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
     <xs:element name="horario"> 
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="modulos">
+                
+                <xs:element name="modulos" type="tipoModulos"/>
+                <xs:element name="profesores" type="tipoProfesores"/>
+                <xs:element name="imparte" type="tipoImparte"/>
+                <xs:element name="grupo" type="tipoGrupo" maxOccurs="4"/>
+                
+                
+                <!-- Lo de abajo Esta MAL-->
+                
+               <!-- <xs:element name="modulos">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="modulo" maxOccurs="unbounded">
@@ -67,8 +149,8 @@ and open the template in the editor.
                             <xs:element name="hora" maxOccurs="unbounded">
                                 <xs:simpleContent>
                                     <xs:extension base="xs:string">
-                                        <xs:attribute name="entrada" use="required" type="xs:string"/> 
-                                        <xs:attribute name="salida" use="required" type="xs:string"/> 
+                                        <xs:attribute name="entrada" use="required" type="xs:time"/> 
+                                        <xs:attribute name="salida" use="required" type="xs:time"/> 
                                     </xs:extension>                                                    
                                 </xs:simpleContent>
                                <xs:element name="dia_sem">
@@ -83,7 +165,9 @@ and open the template in the editor.
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+                                -->
             </xs:sequence>
+            <xs:attribute name="curso" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>

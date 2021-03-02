@@ -4,16 +4,16 @@
 <!ATTLIST recetas
     xsi:noNamespaceSchemaLocation CDATA #IMPLIED
     xmlns:xsi CDATA #IMPLIED>
-<!ELEMENT receta (nombre+,descripcion?,tiempo+,ingredientes+,instrucciones?)>
+<!ELEMENT receta (nombre,descripcion?,tiempo+,ingredientes+,instrucciones?)>
 <!ATTLIST receta
-    plato CDATA #REQUIRED>
+    plato (primero|segundo|postre) #REQUIRED>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT descripcion EMPTY>
 <!ELEMENT tiempo EMPTY>
 <!ATTLIST tiempo
                    preparacion CDATA #REQUIRED>
 <!ELEMENT ingredientes (ingrediente)+>
-<!ELEMENT ingrediente (nombreIngrediente,cantidad)>
+<!ELEMENT ingrediente (nombreIngrediente,cantidad?)>
 <!ELEMENT nombreIngrediente (#PCDATA)>
 <!ELEMENT cantidad (#PCDATA)>
 <!ATTLIST cantidad

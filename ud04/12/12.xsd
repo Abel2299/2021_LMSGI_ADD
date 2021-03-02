@@ -9,8 +9,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="receta" minOccurs="1" maxOccurs="unbounded">
-                    <xs:complexType>
-                        
+                    <xs:complexType>                       
                         <xs:sequence>
                             <xs:element name="nombre" type="xs:string"/>
                             <xs:element name="descripcion" type="xs:string"/>
@@ -26,7 +25,7 @@
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="nombreIngrediente" type="xs:string"/>
-                                                    <xs:element name="cantidad" minOccurs="0" maxOccurs="1">
+                                                    <xs:element name="cantidad" minOccurs="0">
                                                         <xs:complexType>
                                                             <xs:simpleContent>
                                                                 <xs:extension base="xs:integer">

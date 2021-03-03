@@ -26,7 +26,7 @@
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="nombreIngrediente" type="xs:string"/>
-                                                    <xs:element name="cantidad" minOccurs="0" maxOccurs="1">
+                                                    <xs:element name="cantidad" minOccurs="0" maxOccurs="unbounded">
                                                         <xs:complexType>
                                                             <xs:simpleContent>
                                                                 <xs:extension base="xs:integer">
@@ -51,7 +51,6 @@
                         </xs:sequence>
                         <xs:attribute name="plato" type="xs:string"/>       
                     </xs:complexType>      
-                           
                 </xs:element>
             </xs:sequence>
         </xs:complexType>

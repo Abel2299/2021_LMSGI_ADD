@@ -28,7 +28,7 @@ xsi:noNamespaceSchemaLocation="12.xsd">
                 <cantidad unidad="gramos">100</cantidad>
             </ingrediente>
             <ingrediente>
-                <nombreIngrediente>sal</nombreIngrediente>              
+                <nombreIngrediente>sal</nombreIngrediente>    
             </ingrediente>
             <ingrediente>
                 <nombreIngrediente>pimienta</nombreIngrediente>

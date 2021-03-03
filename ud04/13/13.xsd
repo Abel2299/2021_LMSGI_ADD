@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"> 
+    <!--declaracion de tipos simples-->
+    <xs:simpleType name="comida">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxExclusive value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--Principio de datos-->
+    <xs:element name="formulario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="datos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="direccion" type="xs:string"/>
+                            <xs:element name="email" type="xs:string"/>
+                            <xs:element name="telefono" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>   
+                <!--Final de datos-->
+                <!--Principio de carta-->
+                <xs:element name="carta">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="entradaFria" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:attribute name="plato" use="required" >
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="carpaccio|terrina|brioche"></xs:pattern>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="pescados" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="plato" use="required" >
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="merluza|bacalao|tataki"></xs:pattern>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="carnes">
+                                <xs:complexType>
+                                    <xs:attribute name="plato" use="required" >
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="ciervo|cordero|codillo"></xs:pattern>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>           
+                <!--Final de carta-->
+                <!--Principio de establecimiento-->               
+                <xs:element name="establecimiento">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="instalaciones">
+                                <xs:complexType>
+                                    <xs:attribute name="limpieza">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="limpio|normal|descuidado"></xs:pattern>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="calidadComida">      
+                                <xs:complexType>
+                                    <xs:attribute name="nota" type="comida" use="required"/>   <!--El tipo se declara arriba del todo-->
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="atencionPersonal">
+                                <xs:complexType>
+                                    <xs:attribute name="atencion">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="satisfactorio|normal|malo"></xs:pattern>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="tiempoRestaurante" type="xs:string" minOccurs="0"/>
+                            <xs:element name="espera">      
+                                <xs:complexType>
+                                    <xs:attribute name="tiempo" type="comida"/>   
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>    
+                <!--Final de establecimiento-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

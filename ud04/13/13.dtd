@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT formulario (datos,carta+,establecimiento)>
+<!ATTLIST formulario
+    xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED>
+
+<!ELEMENT datos (nombre,direccion,email,telefono)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT carta (entradaFria,pescados,carnes)*>
+<!ELEMENT entradaFria EMPTY>
+<!ATTLIST entradaFria
+    plato CDATA #REQUIRED>
+<!ELEMENT pescados EMPTY>
+<!ATTLIST pescados
+    plato CDATA #REQUIRED>
+<!ELEMENT carnes EMPTY>
+<!ATTLIST carnes
+    plato CDATA #REQUIRED>
+<!ELEMENT establecimiento (instalaciones,calidadComida,atencionPersonal,tiempoRestaurante,espera)>
+<!ELEMENT instalaciones EMPTY>
+<!ATTLIST instalaciones
+    limpieza CDATA #IMPLIED>
+<!ELEMENT calidadComida EMPTY>
+<!ATTLIST calidadComida
+    nota CDATA #REQUIRED>
+<!ELEMENT atencionPersonal EMPTY>
+<!ATTLIST atencionPersonal
+    atencion CDATA #IMPLIED>
+<!ELEMENT tiempoRestaurante EMPTY>
+<!ELEMENT espera EMPTY>
+<!ATTLIST espera
+    tiempo CDATA #IMPLIED>

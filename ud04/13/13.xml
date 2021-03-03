@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formulario SYSTEM '13.dtd'>
+<formulario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="13.xsd">
+    <datos>
+        <nombre>Prueba</nombre>
+        <direccion>C/Prueba</direccion>
+        <email>prueba@gmail.com</email>
+        <telefono>123456789</telefono>
+    </datos>
+    <carta>
+        <entradaFria plato="terrina"/>
+        <pescados plato ="bacalao"/>
+        <carnes plato="cordero"/>
+    </carta>
+    <establecimiento>
+        <instalaciones limpieza="normal"/>
+        <calidadComida nota="7"/>
+        <atencionPersonal atencion="satisfactorio"/>
+        <tiempoRestaurante></tiempoRestaurante>
+        <espera tiempo="3"></espera>
+    </establecimiento>
+</formulario>

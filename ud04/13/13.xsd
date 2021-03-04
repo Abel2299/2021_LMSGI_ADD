@@ -81,7 +81,7 @@
                             </xs:element>
                             <xs:element name="calidadComida">      
                                 <xs:complexType>
-                                    <xs:attribute name="nota" type="comida" use="required"/>   <!--El tipo se declara arriba del todo-->
+                                    <xs:attribute name="nota" type="comida" default="7"/>   <!--El tipo se declara arriba del todo-->
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="atencionPersonal">

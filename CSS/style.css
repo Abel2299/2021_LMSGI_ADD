@@ -19,10 +19,6 @@
     /* transition: linear 0.5s; */
 }
 
-.menu .xml:hover {
-    cursor: not-allowed;
-}
-
 .home {
     display: inline-block;
     width: 40%;
@@ -122,11 +118,15 @@
     width: 33%;
 }
 
-.xml, .dtd, .esquema{
-    display: inline-block;    
+.container, .xml, .cajaPractica{
+    display: inline-block;
 }
 
-.esquema{
-    display:inline-block;
-    padding-left: 200px;
+.container, .dtd, .cajaPractica{
+    display: inline-block;
+}
+
+.container, .esquema, .cajaPractica{
+    display: inline-block;
+    margin-left: 70px;
 }

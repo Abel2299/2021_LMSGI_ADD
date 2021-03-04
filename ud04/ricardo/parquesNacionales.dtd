@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT parques (parqueNacional*)>
+<!ATTLIST parques
+        xmlns:xsi CDATA #IMPLIED
+    xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+<!ELEMENT parqueNacional (nombre*,provincia*,morfologia*,clima+,poblaciones*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ATTLIST provincia 
+          comunidad  CDATA #REQUIRED>
+<!ELEMENT morfologia (extension,tipo?)>
+<!ELEMENT extension (#PCDATA)>
+<!ATTLIST extension 
+          unidad (kilometros|hectareas) #REQUIRED>
+<!ELEMENT tipo (#PCDATA)>
+<!ATTLIST tipo 
+          terreno (montaña|litoral|llano|vega|humedal) #IMPLIED>
+<!ELEMENT clima EMPTY>
+<!ATTLIST clima 
+          predominante (mediterraneo|continental) #REQUIRED>
+<!ELEMENT poblaciones (fauna,flora)*>
+<!ELEMENT fauna (nombre,numero?,proteccion)>
+<!ELEMENT numero (#PCDATA)>
+<!ATTLIST numero 
+          opcion (estimado|censado) #REQUIRED>
+<!ELEMENT proteccion (#PCDATA)>
+<!ELEMENT flora (nombre,densidad,estado?)>
+<!ELEMENT densidad (#PCDATA)>
+<!ELEMENT estado (#PCDATA)>

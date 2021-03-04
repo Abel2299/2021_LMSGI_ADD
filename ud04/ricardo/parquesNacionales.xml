@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE parques SYSTEM 'parquesNacionales.dtd'>
+<parques 
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:noNamespaceSchemaLocation='parquesNacionales.xsd'>
+    <parqueNacional>
+        <nombre>Cabañeros</nombre>
+        <provincia comunidad='Castilla la Mancha'>Ciudad Real</provincia>
+        <morfologia>
+            <extension unidad='hectareas'>6000</extension>
+            <tipo terreno='llano'></tipo>
+        </morfologia>
+        <clima predominante='continental'/>
+        <poblaciones>
+            <fauna>
+                <nombre>Lince ibérico</nombre>
+                <numero opcion='estimado'>60</numero>
+                <proteccion>En peligro de extinción</proteccion>
+            </fauna>
+            <flora>
+                <nombre>Quercus quercus</nombre>
+                <densidad>100</densidad>
+                <estado>No amenazada</estado>
+            </flora>
+             <fauna>
+                <nombre>Ciervo</nombre>
+                <numero opcion='censado'>6000</numero>
+                <proteccion>No amenazada</proteccion>
+            </fauna>
+            <flora>
+                <nombre>Eucalipto</nombre>
+                <densidad>5</densidad>
+                <estado>Invasora</estado>
+            </flora>
+        </poblaciones>
+    </parqueNacional>
+    <parqueNacional>
+        <nombre>Sierra de Guadarrama</nombre>
+        <provincia comunidad='Madrid'>Madrid</provincia>
+        <morfologia>
+            <extension unidad='hectareas'>9000</extension>
+            <tipo terreno='montaña'></tipo>
+        </morfologia>
+        <clima predominante='continental'/>
+        <poblaciones>
+            <fauna>
+                <nombre>Lince ibérico</nombre>
+                <numero opcion='estimado'>9</numero>
+                <proteccion>En peligro de extinción</proteccion>
+            </fauna>
+            <flora>
+                <nombre>Abeto canadiense</nombre>
+                <densidad>10</densidad>
+                <estado>Invasora</estado>
+            </flora>
+        </poblaciones>
+    </parqueNacional>
+</parques>
+

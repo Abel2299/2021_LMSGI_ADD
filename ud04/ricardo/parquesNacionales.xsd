@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="parques">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='parqueNacional' minOccurs='1' maxOccurs='unbounded'>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name='nombre' type='xs:string' maxOccurs='1'/>
+                            <xs:element name='provincia'>
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name='comunidad' type='xs:string' use='required'/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name='morfologia'>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name='extension'>
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name='unidad' use='required'>
+                                                            <xs:simpleType>
+                                                                <xs:restriction base='xs:string'>
+                                                                    <xs:pattern value="kilometros|hectareas"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name='tipo'>
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base='xs:string'>
+                                                        <xs:attribute name='terreno'>
+                                                            <xs:simpleType>
+                                                                <xs:restriction base='xs:string'>
+                                                                    <xs:pattern value="montaña|litoral|llano|vega|humedal"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>                                                       
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name='clima'>
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base='xs:string'>
+                                            <xs:attribute name='predominante'>
+                                                <xs:simpleType>
+                                                    <xs:restriction base='xs:string'>
+                                                        <xs:pattern value="mediterraneo|continental"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name='poblaciones' minOccurs='1'>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name='fauna' minOccurs='1'>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name='nombre' type='xs:string'/>
+                                                    <xs:element name='numero'>
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base='xs:positiveInteger'>
+                                                                    <xs:attribute name='opcion'>
+                                                                        <xs:simpleType>
+                                                                            <xs:restriction base='xs:string'>
+                                                                                <xs:pattern value="estimado|censado"/>
+                                                                            </xs:restriction>
+                                                                        </xs:simpleType>
+                                                                    </xs:attribute>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                      </xs:element>
+                                                      <xs:element name='proteccion' type='xs:string'/>
+                                                      </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                                      <xs:element name='flora' minOccurs='1'>
+                                                          <xs:complexType>
+                                                              <xs:sequence>
+                                                                  <xs:element name='nombre' type='xs:string'/>
+                                                                  <xs:element name='densidad' type='xs:string'/>
+                                                                  <xs:element name='estado' type='xs:string'/>
+                                                              </xs:sequence>
+                                                          </xs:complexType>
+                                                      </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

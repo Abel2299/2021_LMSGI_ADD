@@ -13,7 +13,7 @@
 <!ELEMENT carta (entradaFria,pescados,carnes)*>
 <!ELEMENT entradaFria EMPTY>
 <!ATTLIST entradaFria
-    plato CDATA #REQUIRED>
+    plato (carpaccio|terrina|brioche) #REQUIRED>
 <!ELEMENT pescados EMPTY>
 <!ATTLIST pescados
     plato CDATA #REQUIRED>

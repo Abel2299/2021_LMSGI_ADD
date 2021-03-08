@@ -1,16 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT horario (lunes,martes,miercoles,jueves,viernes)>
+<!ELEMENT lunes (EDD|SINF,PROG,recreo,Libre)>
 <!ELEMENT EDD (#PCDATA)>
+<!ATTLIST EDD
+    prof CDATA #IMPLIED>
 <!ELEMENT SINF (#PCDATA)>
+<!ATTLIST SINF
+    prof CDATA #IMPLIED>
 <!ELEMENT PROG (#PCDATA)>
+<!ATTLIST PROG
+    prof CDATA #IMPLIED>
 <!ELEMENT recreo (#PCDATA)>
 <!ELEMENT Libre (#PCDATA)>
+<!ELEMENT martes (BBDD,PROG,recreo,LMSGI)>
 <!ELEMENT BBDD (#PCDATA)>
+<!ATTLIST BBDD
+    prof CDATA #IMPLIED>
 <!ELEMENT LMSGI (#PCDATA)>
-<!ELEMENT lunes ()>
-<!ATTLIST EDD prof ID #REQUIRED>
-<!ATTLIST SINF prof ID #REQUIRED>
-<!ATTLIST LMSGI prof ID #REQUIRED>
-<!ATTLIST PROG prof ID #REQUIRED>
-<!ATTLIST EDD prof ID #REQUIRED>
-<!ATTLIST BBDD prof ID #REQUIRED>
+<!ATTLIST LMSGI
+    prof CDATA #IMPLIED>
+<!ELEMENT miercoles (PROG,Libre,BBDD,recreo,EDD)>
+<!ELEMENT jueves (LMSGI,PROG,recreo,SINF)>
+<!ELEMENT viernes (EDD,SINF,Libre,recreo,BBDD)>
+
 

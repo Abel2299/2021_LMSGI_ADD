@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/mapaestelar.dtd
+
+-->
+<!ELEMENT constelacion (nombreEspañol,superficie,estrellas,objetos,colindantes,observacion)>
+<!ATTLIST constelacion
+    nombreLatin CDATA #REQUIRED>
+<!ATTLIST constelacion
+            xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+            xmlns:xsi CDATA #IMPLIED>
+<!ELEMENT nombreEspañol (#PCDATA)>
+<!ELEMENT superficie (#PCDATA)>
+<!ELEMENT estrellas (asterismo,masBrillante)>
+<!ATTLIST estrellas
+    numeroEstrellas CDATA #IMPLIED>
+<!ELEMENT asterismo (#PCDATA)>
+<!ELEMENT masBrillante (#PCDATA)>
+<!ATTLIST masBrillante
+    luminosidad CDATA #IMPLIED>
+<!ELEMENT objetos (cumulos,nebulosas,galaxias,cuasares,lluviaMeteoros*)>
+<!ELEMENT cumulos EMPTY>
+<!ELEMENT nebulosas EMPTY>
+<!ELEMENT galaxias EMPTY>
+<!ELEMENT cuasares EMPTY>
+<!ELEMENT lluviaMeteoros (#PCDATA)>
+<!ELEMENT colindantes (nombre)*>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT observacion (hemisferio,mes,hora)*>
+<!ELEMENT hemisferio (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>

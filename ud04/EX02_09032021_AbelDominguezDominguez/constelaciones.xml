@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE constelacion SYSTEM 'constelaciones.dtd'>
+<constelacion nombreLatin="Ursa Maior" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="constelaciones.xsd">
+    <nombreEspañol>La Osa Mayor</nombreEspañol>
+    <superficie>1279.7</superficie>
+    <estrellas numeroEstrellas="209">
+        <asterismo>7</asterismo>
+        <masBrillante luminosidad="108">Alioth</masBrillante>
+    </estrellas>
+    <objetos>
+        <cumulos></cumulos>
+        <nebulosas></nebulosas>
+        <galaxias></galaxias>
+        <cuasares></cuasares>
+        <lluviaMeteoros>4</lluviaMeteoros>
+    </objetos>
+    <colindantes>
+        <nombre>Bootes</nombre>
+        <nombre>Camelopardalis</nombre>
+        <nombre>Canes Venatici</nombre>
+        <nombre>Draco</nombre>
+        <nombre>Leo</nombre>
+        <nombre>Leo Minor</nombre>
+        <nombre>Lynx</nombre>
+    </colindantes>
+    <observacion>
+        <hemisferio>Norte</hemisferio>
+        <mes>4</mes>
+        <hora>21:00:00</hora>
+    </observacion>
+</constelacion>

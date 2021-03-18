@@ -17,7 +17,7 @@
                                         <xs:element name="matricula" type="xs:string" maxOccurs="10">
                                             <xs:simpleType>
                                                 <xs:restriction>
-                                                    <xs:pattern value="[0-9"
+                                                    <xs:pattern value="[0-9]{4}[A-Z]"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
@@ -25,20 +25,26 @@
                                         <xs:element name="marca" type="xs:string"/>
                                         <xs:element name="modelo" type="xs:string"/>
                                         <xs:element name="color" type="xs:string"/>
-                                        <xs:element name="km" type="xs:Integer"/>
+                                        <xs:element name="km" type="xs:positiveInteger"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="reparaciones">
+                <xs:element name="reparaciones" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="reparacion">
                                 <xs:complexType>
                                     <xs:sequence>
                                         
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

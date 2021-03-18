@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+           
+    <xs:element name="garaje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="coches" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="coche">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="matricula" type="xs:string" maxOccurs="10">
+                                            <xs:simpleType>
+                                                <xs:restriction>
+                                                    <xs:pattern value="[0-9"
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="propietario" type="xs:string"/>
+                                        <xs:element name="marca" type="xs:string"/>
+                                        <xs:element name="modelo" type="xs:string"/>
+                                        <xs:element name="color" type="xs:string"/>
+                                        <xs:element name="km" type="xs:Integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reparaciones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

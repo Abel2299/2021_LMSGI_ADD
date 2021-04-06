@@ -14,6 +14,7 @@
     
     <xsl:template match="alumno">
       <p> <xsl:value-of select="concat(nombre,' ', apellido)"/></p>
+      <p> <xsl:value-of select="concat(direccion/cp,'  ',direccion/poblacion)"/></p>
     </xsl:template>
 
 </xsl:stylesheet>

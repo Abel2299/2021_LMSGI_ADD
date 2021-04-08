@@ -35,14 +35,11 @@
         </li>
           
         <table style="border: 1px solid black">
-            <th>
-                <td><xsl:value-of select="concat(nombre,'  ',apellido)"/></td>
-            </th>
+            <tr>
+                <td><xsl:value-of select="nombre"/></td>     
             
-            <th>
-                <td><xsl:value-of select="concat(direccion/cp,'  ',direccion/poblacion)"/></td>
-            </th>
-            
+                <td><xsl:value-of select="apellido"/></td>      
+            </tr>
         </table>
            <hr/>
     </xsl:template>

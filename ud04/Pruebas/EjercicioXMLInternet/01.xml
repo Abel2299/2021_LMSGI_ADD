@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedidos SYSTEM '01.dtd'>
+
+<pedidos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="01.xsd">
+    <pedido>
+        <comprador dni="71041503T">
+            <nombreCliente>Juan</nombreCliente>
+            <apellido1>Rabano</apellido1>
+            <apellido2>Fernandez</apellido2>    
+        </comprador>
+        <productos>
+            <producto id="A2023">
+                <nombrePro>Manitou</nombrePro>
+                <precio>1</precio>
+            </producto>
+        </productos>
+        <entrega repartidor="correos">
+            <direcciones>
+                <direccion>
+                    <localidad>Aguilar de Tera</localidad>
+                    <provincia>Zamora</provincia>
+                </direccion>
+            </direcciones>
+        </entrega>
+    </pedido>
+</pedidos>

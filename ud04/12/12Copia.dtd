@@ -5,14 +5,14 @@
     PUBLIC ID: -//vendor//vocabulary//EN
     SYSTEM ID: http://server/path/12Copia.dtd
 
--->
+--> 
 
 <!ELEMENT receta (nombre,descripcion?,tiempo,ingredientes,instrucciones)>
 <!ATTLIST receta
             xsi:noNamespaceSchemaLocation CDATA #IMPLIED
             xmlns:xsi CDATA #IMPLIED>
 <!ATTLIST receta
-            plato (primero|segundo|postre) #REQUIRED>
+            plato (primero|segundo|postre)  #REQUIRED>
 
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT descripcion (#PCDATA)>

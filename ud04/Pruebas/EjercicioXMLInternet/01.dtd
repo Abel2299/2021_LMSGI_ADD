@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ATTLIST pedidos
+            xsi:noNamespaceSchemaLocation CDATA #IMPLIED
+            xmlns:xsi CDATA #IMPLIED>
+<!ELEMENT pedidos (pedido*)>
+<!ELEMENT pedido (comprador, productos, entrega)>
+<!ELEMENT comprador (nombreCliente, apellido1, apellido2)>
+<!ATTLIST comprador dni ID #REQUIRED>
+<!ELEMENT nombreCliente (#PCDATA)>
+<!ELEMENT apellido1 (#PCDATA)>
+<!ELEMENT apellido2 (#PCDATA)>
+<!ELEMENT productos (producto*)>
+<!ELEMENT producto (nombrePro, precio)>
+<!ATTLIST producto id CDATA #REQUIRED>
+<!ELEMENT nombrePro (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT entrega (direcciones)>
+<!ATTLIST entrega 
+                repartidor (correos|seur) #IMPLIED>
+<!ELEMENT direcciones (direccion) >
+<!ELEMENT direccion (localidad, provincia)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>

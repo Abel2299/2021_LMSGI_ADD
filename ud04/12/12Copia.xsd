@@ -31,7 +31,7 @@
                                         <xs:element name="nombre" type="xs:string"/>
                                         <xs:element name="cantidad" minOccurs="0">
                                             <xs:complexType>
-                                                <xs:simpleContent>
+                                                <xs:simpleContent>                                                  
                                                     <xs:extension base="xs:positiveInteger" >
                                                         <xs:attribute name="unidad">
                                                             <xs:simpleType>

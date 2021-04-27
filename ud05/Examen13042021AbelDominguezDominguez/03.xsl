@@ -108,12 +108,19 @@
                 <xsl:value-of select="current()"/>
             </abbr>
             <br/>
+            <xsl:variable name="listaProfesores" select="//asignatura[@codM=current()]/@codProfesor"/>  <!-- creacion de una variable   |     Para acceder a la variable ponemos el dolar-->
             <abbr>
                 <xsl:attribute name="title">
-                    <xsl:value-of select=""/>
+                    <xsl:apply-templates select="//profesores/profesor[contains($listaProfesores,@codP)]" mode="xxx" />   <!-- Llamar a una plantilla  --> 
                 </xsl:attribute>
-                <xsl:value-of select="//asignatura[@codM=current()]/@codProfesor"/>
+                <xsl:value-of select="$listaProfesores"/>            
             </abbr>
         </td>
     </xsl:template>  
+    <xsl:template match="profesor" mode="xxx">
+        <xsl:if test="position()!=1">
+            <xsl:text>, </xsl:text>
+        </xsl:if>
+        <xsl:value-of select="text()"/>
+    </xsl:template>
 </xsl:stylesheet>

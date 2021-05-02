@@ -14,50 +14,58 @@
     <xsl:template match="/">
         <html>
             <body>
-                
-                <xsl:template match="listatickets/ticket">
+                <xsl:template match="listatickets">
                     <h1>Informacion de tickets</h1>
                     <h2>Listado de tickets</h2>
                                 
                     <xsl:template match="listatickets/ticket">
                         
-                        <h3>Ticket:</h3>
+                       
                         <table>
                             
-                            <xsl:for-each select="listatickets/ticket">
+                            <xsl:for-each select="//ticket">
                                 <tr>
                                     <td>
+                                        Ticket: 
                                         <xsl:value-of select="numero"/>
                                     </td>
+                                </tr>
+                                <tr>
+                                    <td>Producto</td>
+                                    <td>Precio</td>
+                                </tr>
+                                <xsl:for-each select="producto">
+                                    <tr>
+                                        <td>
+                                            <xsl:value-of select="nombre"/>
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select="precio"/>
+                                        </td>
+                                    </tr>
+                                </xsl:for-each>
+                                <tr>  
                                     <td>
-                                        <xsl:value-of select="fecha"/>
-                                    </td>
-                                    <td>
+                                        Fecha del Ticket: 
+                                        <xsl:value-of select="fecha"/> - 
                                         <xsl:value-of select="hora"/>
                                     </td>
                                 </tr>
                             </xsl:for-each>
-                        </table>
-                    </xsl:template>
-                    <xsl:template match="listatickets/ticket">
-                        <table>   
                             <tr>
-                                <td>Producto</td>
-                                <td>Precio</td>
-                            </tr>     
-                            <xsl:for-each select="listatickets/ticket/producto">
-                                <tr>
-                                    <td>
-                                        <xsl:value-of select="nombre"/>
-                                    </td>
-                                    <td>
-                                        <xsl:value-of select="precio"/>
-                                    </td>
-                                </tr>
-                            </xsl:for-each>
+                                <td>
+                                    Numero de tickets:
+                                    <xsl:value-of select="count(/listatickets/ticket)"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total de tickets:
+                                    <xsl:value-of select="sum(/listatickets/ticket/total)"/>
+                                </td>
+                            </tr>
                         </table>
                     </xsl:template>
-                    
                 </xsl:template>  
             </body>
         </html>

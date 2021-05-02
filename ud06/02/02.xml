@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="02.xsl"?>
-<<<<<<< HEAD
 
-<listatickets>
-=======
 <!DOCTYPE listatickets SYSTEM '02.dtd'>
 
 <listatickets >
->>>>>>> f67b5b66fbe5f3c09ef74d62563250218c10fca8
 <!-- Autor .-Abel Dominguez Dominguez -->
 <!-- Fecha.- Miercoles 28 de abril 2021 -->
 <!-- Descripcion .- Listado de tickets -->

@@ -9,13 +9,13 @@
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-    <xsl:output method="html"/>
-
+    <xsl:output method="xml"  indent="yes" omit-xml-declaration="no"/>
+    
     <!-- TODO customize transformation rules 
          syntax recommendation http://www.w3.org/TR/xslt 
     -->
-    <xsl:template match="/">
-        <body>
+    <!-- <xsl:template match="/">
+        <root>
             <xsl:for-each select="root/row">
                 <row>
                     <anyo>
@@ -29,7 +29,19 @@
                     </usuarios>
                 </row>
             </xsl:for-each>
-        </body>
+        </root>
+    </xsl:template>-->
+    
+    <xsl:template match="@* | node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="@*">
+        <xsl:element name="{name()}">
+             <xsl:value-of select="."/>
+        </xsl:element>
     </xsl:template>
 
 </xsl:stylesheet>

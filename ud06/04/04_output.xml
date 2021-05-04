@@ -1,0 +1,16 @@
+<factura>
+    <n_factura>F555</n_factura>
+    <datos_emisor>
+        <cod_postal></cod_postal>
+    </datos_emisor>
+    <datos_receptor></datos_receptor>
+    <datos_receptor>
+        <cod_postal></cod_postal>
+    </datos_receptor>
+    <datos_factura>
+        <n_ped></n_ped>
+        <iva></iva>
+        <f_pago></f_pago>
+        <moneda></moneda>
+    </datos_factura>
+</factura>

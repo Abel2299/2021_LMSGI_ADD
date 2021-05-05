@@ -19,29 +19,29 @@
             <n_factura>
                 <xsl:value-of select="@n_factura"/>
             </n_factura>
-            
-            <xsl:template match="factura/datos_emisor">
+            <xsl:template match="datos_emisor">
                 <datos_emisor>
-                   <!-- <xsl:for-each select="datos_emisor">
+                   
                     <cod_postal>
                         <xsl:value-of select="@cod_postal"/>
                     </cod_postal>
-                    </xsl:for-each>-->
+                    
                 </datos_emisor>
             </xsl:template>
             
-            <xsl:template match="factura/datos_receptor">
+            <xsl:template match="datos_receptor">
                 <datos_receptor>
-                    <xsl:value-of select="@datos_receptor"/>
-                </datos_receptor>
-                <datos_receptor>
+                    
+                    <n_cli>
+                        <xsl:value-of select="@n_cli"/>
+                    </n_cli>
                     <cod_postal>
                         <xsl:value-of select="@cod_postal"/>
                     </cod_postal>
                 </datos_receptor>
             </xsl:template>
             
-            <xsl:template match="factura/datos_factura">
+            <xsl:template match="datos_factura">
                 <datos_factura>
                     <n_ped>
                         <xsl:value-of select="@n_ped"/>
@@ -54,10 +54,29 @@
                     </f_pago>
                     <moneda>
                         <xsl:value-of select="@moneda"/>
-                    </moneda>                 
+                    </moneda>  
+                    <xsl:for-each select="//linea">
+                        <xsl:element name='{name()}'>
+                            <xsl:for-each select="*">
+                                <xsl:element name='{name()}'>
+                                    <xsl:value-of select="."/>
+                                </xsl:element>
+                            </xsl:for-each>   
+                        </xsl:element>
+                    </xsl:for-each>    
+                    <xsl:element name='base'>
+                        <xsl:value-of select="base"/>
+                    </xsl:element>      
+                    <xsl:element name='cuota_iva'>
+                        <xsl:value-of select="cuota_iva"/>
+                    </xsl:element>      
+                    <xsl:element name='total'>   
+                        <xsl:value-of select="total"/>
+                    </xsl:element>       
+    
                 </datos_factura>
             </xsl:template>
         </factura>
     </xsl:template>
-
+     
 </xsl:stylesheet>

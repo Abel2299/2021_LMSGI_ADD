@@ -14,14 +14,15 @@
     <!-- TODO customize transformation rules 
          syntax recommendation http://www.w3.org/TR/xslt 
     -->
-    <xsl:template match="factura">
+    <xsl:template match="/factura">
         <factura>
             <n_factura>
                 <xsl:value-of select="@n_factura"/>
             </n_factura>
             <xsl:template match="datos_emisor">
                 <datos_emisor>
-                   
+                <xsl:apply-templates  select="datos_emisor/*"/> 
+                
                     <cod_postal>
                         <xsl:value-of select="@cod_postal"/>
                     </cod_postal>
@@ -29,7 +30,7 @@
                 </datos_emisor>
             </xsl:template>
             
-            <xsl:template match="datos_receptor">
+            <!--<xsl:template match="datos_receptor">
                 <datos_receptor>
                     
                     <n_cli>
@@ -39,7 +40,11 @@
                         <xsl:value-of select="@cod_postal"/>
                     </cod_postal>
                 </datos_receptor>
-            </xsl:template>
+            </xsl:template>-->
+             <datos_receptor>
+                <xsl:apply-templates select="datos_receptor/@*"/>
+                <xsl:apply-templates select="datos_receptor/*"/>
+            </datos_receptor>
             
             <xsl:template match="datos_factura">
                 <datos_factura>

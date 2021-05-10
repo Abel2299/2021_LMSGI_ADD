@@ -159,7 +159,7 @@
                         </tr>
                     </tr>
                     <tr>
-                        IMPORTES FACTURA
+                        <td>IMPORTES FACTURA</td>
                     </tr>
                     <tr>
                         <td>
